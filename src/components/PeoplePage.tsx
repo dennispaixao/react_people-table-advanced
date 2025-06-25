@@ -32,7 +32,7 @@ export const PeoplePage = () => {
         person.motherName,
       ].some(name => name?.toLowerCase().includes(query));
 
-      const century = Math.ceil(person.born / 100);
+      const century =Math.floor(person.born / 100);
       const centuryMatches =
         centuries.length === 0 || centuries.includes(`${century}00s`);
 
